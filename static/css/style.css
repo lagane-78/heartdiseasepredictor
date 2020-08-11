@@ -44,3 +44,6 @@ img {
  .mylink{color: rgb(190, 16, 16);
     font-size: large;}
 
+.myheader {font-size: x-large !important;
+font-weight: bold !important;
+color: black !important;}

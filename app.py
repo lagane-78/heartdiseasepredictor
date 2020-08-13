@@ -22,6 +22,10 @@ def team():
 def data():
     return render_template('data.html')
 
+@app.route('/gender')
+def genderanalysis():
+    return render_template('gender.html')
+
 if __name__ == '__main__':
     app.run(debug = True)
 

@@ -52,5 +52,9 @@ text-align: center !important;}
 .dropdown-menu .dropdown-item{font-weight: bold;}
 
 .dropdown-menu .dopdown-item:hover {
+  background-image: none;
   color: red;
   }
+
+.btn .btn-default{background-color: ivory !important;}
+

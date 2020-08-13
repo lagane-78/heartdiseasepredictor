@@ -42,7 +42,7 @@ def predictmodel():
     # change this to take the data from the form to pass into
     inputfile ="temp/data/testing.csv"
     y = predictresult.prediction(inputfile)
-    return render_template('modelresults.html', heart_prediction=y.to_html())
+    return render_template('test.html', heart_prediction=y.to_html())
 
 
 if __name__ == '__main__':

@@ -48,3 +48,9 @@ img {
 font-weight: bold !important;
 color: black !important;
 text-align: center !important;}
+
+.dropdown-menu .dropdown-item{font-weight: bold;}
+
+.dropdown-menu .dopdown-item:hover {
+  color: red;
+  }

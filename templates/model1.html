@@ -10,9 +10,8 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <div class="hero-image">
         <div class="hero-text">
-          <h1>Heart Disease Predictor</h1>
-          <p>With these models we are attempting to see if you can isolate the biggest risk factors leading to heart disease</p>
-        </div>
+          <h1>Heart Disease Prediction Demonstration Model</h1>
+          </div>
       </div>
       <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: rgb(211, 17, 17)";>
         <a class="navbar-brand" href="/home">Home</a>
@@ -63,16 +62,40 @@
 </head>
 <body>  
 
- <footer class="container-fluid text-center">
+ <footer class="container-fluid text-left">
   <h5 class="myheader">KNN MODEL</h5>
+  <p> KNN (k-nearest neighbors algorithm) is a non-parametric model and is commonly used approach for simple machine learning tasks.
+    KNN classifies parameters based on other parameters that are most similar to it - ie its nearest neighbor.
+    The KNN model is well suited to heart disease (HD) application because its non-parametric structure can accomodate the many different types of data values that inform heart disease diagnosis. 
+  </p>
+         
 </footer>
 <div class="container">
     <div class="row">
 
     </div>
-    <div class="row"> 
-        <div class="col-lg-6 col-lg-6"><img src="static/images/knn_cm.png"></div>   
-        <div class="col-lg-6 col-lg-6"><img src="static/images/knn_discthresh.png"></div> 
+    <div class="row">
+      <div class="col-lg-1 col-lg-12"><img src="../static/images/knn_cm.png"></div>  
+       <p>Confusion Matrix: This confusion matrix shows sensitivity and specificity of classification among our 205 patients in the test data sample.
+      </p>
+      <p>The KNN model correctly classified 80 true positive cases of HD, and 96 negative cases.  
+        However, the model incorrectly classified 12 patients with HD as healthy, and 17 healthy patients with HD.  </p> 
+        
+      </div>  
+      <p> </p>
+      <p> </p>
+      <div class="row"> 
+        <div class="col-lg-6 col-lg-6"><img src="../static/images/knn_discthresh.png"></div> 
+        <p>Discrimination Threshold: This figure shows the probability (score) at which the positive class is chose over the negative class for binary (yes/no heart disease) classification.
+        </p>
+        <ul>
+          <li>Precision: An increase in precision is a reduction in the number of false positives</li>
+          <li>Recall: An increase in recall decrease the likelihood that the positive class is missed</li>
+          <li>F1 Score: The F1 score is the harmonic mean between precision and recall</li>
+          <li>Queue Rate: The “queue” refers to positive predicted cases</li>
+
+        </ul>
+
       </div>
   </div>   
   <br>
@@ -81,8 +104,18 @@
 
     </div>
     <div class="row"> 
-        <div class="col-lg-6 col-lg-6"><img src="static/images/KNN_ROCAUC.png"></div>   
-        <div class="col-lg-6 col-lg-6"><img src="static/images/knn_classpredict.png"></div> 
+        <div class="col-lg-1 col-lg-12"><img src="../static/images/KNN_ROCAUC.png"></div>  
+        <p> ROC Curve: Receiver Operating Characteristic (or Area Under the Curve) visualizes the tradeoff between the sensitivity (true positive Y-axis) and specificity (false positive X-axis)</p> 
+        <p>Optimal model specification is at the top-left, indicating 100% predictive power. 
+          Therefore a larger area under the curve generally indicates better model predictive performance.
+        </p>
+      </div>
+      <p> </p>
+      <p> </p>
+    <div class="row"> 
+        <div class="col-lg-1 col-lg-12"><img src="../static/images/knn_classpredict.png"></div> 
+        <p>Class Prediction Error: Similar to the confusion matrix, this figure shows the proportion of true and false positive or negative classificaitons.</p>
+
       </div>
   </div> 
 

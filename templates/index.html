@@ -10,8 +10,14 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <div class="hero-image">
         <div class="hero-text">
-          <h1>Heart Disease Predictor</h1>
-          <p>With these models we are attempting to see if you can isolate the biggest risk factors leading to heart disease</p>
+          
+          <div class="row"> 
+            <div class="col-lg-8 col-lg-12"><img src="../static/images/ecg_line.png"></div>   
+          </div>
+          <h1>Heart Disease Prediction Demonstration Model</h1>
+          <p>This project demonstrates the use of machine learning algorithms to provide diagnstic support in the identification of heart disease</p>
+          <p>This is a demonstration project for the UNC Data Analytics Bootcamp. It is not a diagnostic tool</p>
+               
         </div>
       </div>
       <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: rgb(211, 17, 17)";>
@@ -63,17 +69,22 @@
 </head>
 <body>  
 
- <footer class="container-fluid text-center">
-  <p>This is where a brief description of our models and the purpose of our project will go</p>
+ <footer class="container-fluid text-left">
+  <p>
+    Heart disease is the leading cause of death worldwide.  Definitive diagnosis of heart disease is challenging due to its many and complexly interrelated manifestation of symptoms, manifestations, and risk factors.  
+  </p>
+  <p>
+    In this demonstration project, we used machine learning algorithms to develop a heart disease prediction tool to allow users to predict the presence of heart disease based on their individual risk factors, symptoms, test, and examination results.
+  </p>
+  <p>
+    Enter values in the form below to see if these models predict the presence of heart disease:
+  </p>
 </footer>
 <div class="container">
     <div class="row">
 
     </div>
-    <div class="row"> 
-        <div class="col-lg-6 col-lg-6"><img src="static/images/featurecorrelation.png"></div>   
-        <div class="col-lg-6 col-lg-6"><img src="static/images/KNNclassiferscore.png"></div> 
-      </div>
+    
   </div>   
   <form>
     <div class="form-group">
@@ -149,6 +160,9 @@
         <option>6: fixed defect</option>
         <option>7: reversable defect </option>
       </select>
+    </div>
+    <div class="form-group">
+      <button id="button" type="button" class="btn btn-default">Enter</button>
     </div>
   </form>
   

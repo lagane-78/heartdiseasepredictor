@@ -73,90 +73,114 @@
   </p>
 </footer>
 <div class="container">
-    <div class="row">
-
+    <!-- <div class="row"> -->
+      <form>
+        <div class="form-group row">
+          <div class='col-xs-2'>
+          <label for="exampleFormControlInput1">Age</label>
+          <input type="email" class="form-control" id="age" placeholder="25">
+          </div>
+        <!-- </div>
+        <div class="form-group row"> -->
+           <div class="col-xs-2">
+          <label for="exampleFormControlSelect1">Sex</label>
+          <select class="form-control" id="sex">
+            <option>1: Male</option>
+            <option>0: Female</option>
+          </select>
+        </div>
+      </div>
+        <div class="form-group row">
+          <div class="col-xs-3">
+          <label for="exampleFormControlInput1">Resting Heartrate (mm hg)</label>
+          <input type="email" class="form-control" id="trestbp" placeholder="55">
+        </div>
+        <!-- </div>
+        <div class="form-group row"> -->
+          <div class="col-xs-2">
+          <label for="exampleFormControlInput1">Cholesterol</label>
+          <input type="email" class="form-control" id="chol" placeholder="120">
+        </div>
+      </div>
+        <div class="form-group row">
+          <div class="col-xs-3">
+          <label for="exampleFormControlSelect1">fasting blood sugar > 120 mg/dl</label>
+          <select class="form-control" id="fbs">
+            <option>1: True</option>
+            <option>0: False</option>
+          </select>
+        </div>
+      </div>
+        <div class="form-group row">
+          <div class="col-xs-2">
+          <label for="exampleFormControlSelect1">Resting electrocardiographic results</label>
+          <select class="form-control" id="restecg">
+            <option>0: normal</option>
+            <option>1: having ST-T wave abnormality (T wave inversions and/or ST elevation or depression of > 0.05 mV)</option>
+            <option>2: showing probable or definite left ventricular hypertrophy by Estes' criteria </option>
+          </select>
+        </div>
+      </div>
+        <div class="form-group row">
+          <div class="col-xs-2">
+          <label for="exampleFormControlInput1">Maximun Heartrate Achieved</label>
+          <input type="email" class="form-control" id="thalach" placeholder="125">
+        </div>
+      <!-- </div>
+        <div class="form-group row"> -->
+          <div class="col-xs-2">
+          <label for="exampleFormControlSelect1">Exercise induced angina (1 = yes; 0 = no) </label>
+          <select class="form-control" id="exang">
+            <option>0:no</option>
+            <option>1:yes</option>
+          </select>
+        </div>
+      </div>
+        <div class="form-group row">
+          <div class="col-xs-4">
+          <label for="exampleFormControlInput1">ST depression induced by exercise relative to rest </label>
+          <input type="email" class="form-control" id="oldpeak" placeholder="125">
+        </div>
+      </div>
+        <div class="form-group row">
+          <div class="col-xs-">
+          <label for="exampleFormControlSelect1">Slope: the slope of the peak exercise ST segment</label>
+          <select class="form-control" id="restecg">
+            <option>1: upsloping</option>
+            <option>2: flat</option>
+            <option>3: downsloping </option>
+          </select>
+        </div>
+      </div>
+        <div class="form-group row">
+          <div class="col-xs-2">
+          <label for="exampleFormControlSelect1">Number of major vessels (0-3) colored by flourosopy</label>
+          <select class="form-control" id="exang">
+            <option>0</option>
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+          </select>
+        </div>
+      </div>
+        <div class="form-group row">
+          <div class="col-xs-2">
+          <label for="exampleFormControlSelect1">Thal</label>
+          <select class="form-control" id="thal">
+            <option>3: normal</option>
+            <option>6: fixed defect</option>
+            <option>7: reversable defect </option>
+          </select>
+        </div>
+      </div>
+        <div class="form-group">
+          <button id="button" type="button" class="btn btn-danger active" aria-pressed="true">Enter</button>
+        </div>
+      </form>
     </div>
     
   </div>   
-  <form>
-    <div class="form-group">
-      <label for="exampleFormControlInput1">Age</label>
-      <input type="email" class="form-control" id="age" placeholder="25">
-    </div>
-    <div class="form-group">
-      <label for="exampleFormControlSelect1">Sex</label>
-      <select class="form-control" id="sex">
-        <option>1: Male</option>
-        <option>0: Female</option>
-      </select>
-    </div>
-    <div class="form-group">
-      <label for="exampleFormControlInput1">Resting Heartrate (mm hg)</label>
-      <input type="email" class="form-control" id="trestbp" placeholder="55">
-    </div>
-    <div class="form-group">
-      <label for="exampleFormControlInput1">Cholesterol</label>
-      <input type="email" class="form-control" id="chol" placeholder="120">
-    </div>
-    <div class="form-group">
-      <label for="exampleFormControlSelect1">fasting blood sugar > 120 mg/dl</label>
-      <select class="form-control" id="fbs">
-        <option>1: True</option>
-        <option>0: False</option>
-      </select>
-    </div>
-    <div class="form-group">
-      <label for="exampleFormControlSelect1">Resting electrocardiographic results</label>
-      <select class="form-control" id="restecg">
-        <option>0: normal</option>
-        <option>1: having ST-T wave abnormality (T wave inversions and/or ST elevation or depression of > 0.05 mV)</option>
-        <option>2: showing probable or definite left ventricular hypertrophy by Estes' criteria </option>
-      </select>
-    </div>
-    <div class="form-group">
-      <label for="exampleFormControlInput1">Maximun Heartrate Achieved</label>
-      <input type="email" class="form-control" id="thalach" placeholder="125">
-    </div>
-    <div class="form-group">
-      <label for="exampleFormControlSelect1">Exercise induced angina (1 = yes; 0 = no) </label>
-      <select class="form-control" id="exang">
-        <option>0:no</option>
-        <option>1:yes</option>
-      </select>
-    </div>
-    <div class="form-group">
-      <label for="exampleFormControlInput1">ST depression induced by exercise relative to rest </label>
-      <input type="email" class="form-control" id="oldpeak" placeholder="125">
-    </div>
-    <div class="form-group">
-      <label for="exampleFormControlSelect1">Slope: the slope of the peak exercise ST segment</label>
-      <select class="form-control" id="restecg">
-        <option>1: upsloping</option>
-        <option>2: flat</option>
-        <option>3: downsloping </option>
-      </select>
-    </div>
-    <div class="form-group">
-      <label for="exampleFormControlSelect1">Number of major vessels (0-3) colored by flourosopy</label>
-      <select class="form-control" id="exang">
-        <option>0</option>
-        <option>1</option>
-        <option>2</option>
-        <option>3</option>
-      </select>
-    </div>
-    <div class="form-group">
-      <label for="exampleFormControlSelect1">Thal</label>
-      <select class="form-control" id="thal">
-        <option>3: normal</option>
-        <option>6: fixed defect</option>
-        <option>7: reversable defect </option>
-      </select>
-    </div>
-    <div class="form-group">
-      <button id="button" type="button" class="btn btn-default">Enter</button>
-    </div>
-  </form>
+  
   
 
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>

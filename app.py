@@ -4,6 +4,8 @@ from flask import flash, request, redirect, url_for
 from werkzeug.utils import secure_filename
 from glob import glob
 import predictresult
+from flask import request
+import sys
 
 UPLOAD_FOLDER = 'temp/data/'
 ALLOWED_EXTENSIONS = {'txt', 'csv'}
@@ -37,11 +39,17 @@ def data():
 def genderanalysis():
     return render_template('gender.html')
 
-@app.route('/predictmodel')
+@app.route('/predictmodel', methods=['POST'])
 def predictmodel():
+    
+    print("print form data 2", request.form, file=sys.stderr, flush=True)
+    formdata = request.form
+    # print('age and sex')
+    # print(formdata['age'],flush=True)
+    # print(formdata['sex'].split(":")[0],flush=True)
     # change this to take the data from the form to pass into
-    inputfile ="temp/data/testing.csv"
-    y = predictresult.prediction(inputfile)
+    # inputfile = "temp/data/testing.csv"
+    y = predictresult.prediction(formdata)
     return render_template('modelresults.html', heart_prediction=y.to_html())
 
 

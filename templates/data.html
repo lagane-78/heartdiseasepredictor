@@ -10,9 +10,8 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <div class="hero-image">
         <div class="hero-text">
-          <h1>Heart Disease Predictor</h1>
-          <p>With these models we are attempting to see if you can isolate the biggest risk factors leading to heart disease</p>
-        </div>
+          <h1>Heart Disease Prediction Demonstration Model</h1>
+       </div>
       </div>
       <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: rgb(211, 17, 17)";>
         <a class="navbar-brand" href="/home">Home</a>
@@ -26,8 +25,6 @@
           <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
             <a class="dropdown-item" href="model1">KNN</a>
             <a class="dropdown-item" href="model2">LR</a>
-            <a class="dropdown-item" href=""></a>
-            <a class="dropdown-item" href=""></a>
           </div>
         </div>
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
@@ -42,8 +39,6 @@
               <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                 <a class="dropdown-item" href="data">Data</a>
                 <a class="dropdown-item" href="gender">Gender Analysis</a>
-                <a class="dropdown-item" href=""></a>
-                <a class="dropdown-item" href=""></a>
               </div>
             </div>
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
@@ -62,19 +57,44 @@
 </head>
 <body>  
 
- <footer class="container-fluid text-center">
-  <p>Data goes here</p>
+ <footer class="container-fluid text-left">
+  <h2>Training and testing data</h2>
+  <p>We trained and tested the heart disease prediction models on the Cleveland Heart Disease dataset from the UCI Machine Learning Repository.
+    This data is one of few publicly available sources with necessary fields to develope heart and cardiovascular disease prediction models.
+   The data includes 76 attributes in total, but we use 14 primary variables that may include both those that are more highly available indicators for patients, and are 
+  likely to have predictive power.</p>
+
+  <ul>
+    <li>	Age (years):	</li>
+<li>	Sex (1=male, 0=female):	</li>
+<li>	Chest pain (1=typical angina, 2=atypical angina, 3=non-anginal, 4=none):	</li>
+<li>	Resting blood pressure (mmHg):	</li>
+<li>	Cholesterol (mg/dl):	</li>
+<li>	Fasting blood sugar:	</li>
+<li>	Resting ECG (0=normal, 1=ST-T wave abnormality, 2=LVH):	</li>
+<li>	Max heart rate:	</li>
+<li>	Exercise induced angina (1=yes, 0=no):	</li>
+<li>	Peak exercise (1=upsloaping, 2=flat, 3=downsloping):	</li>
+<li>	Number of blood vessels colored by flouroscopy:	</li>
+<li>	Thalassemia (3=normal, 6=fixed defect, 7=reversible defect):	</li>
+
+  </ul>
+
 </footer>
 <div class="container">
     <div class="row">
-
+      <div class="col-lg-1 col-lg-12"><img src="../static/images/featurecorrelation.png"></div>
+      <p> Feature Correlation: This figure shows the pearson correlation between data features and the dependent variable (heart disease). High positive corrleation is indicated towards the right, while the left indicates negative correlation.  </p> 
     </div>
     <div class="row"> 
-
+      <div class="col-lg-1 col-lg-12"><img src="../static/images/radviz.png"></div>
+      <p>Radial Visualizer: This figure shows the joint values of all data features, with blue representing healthy patients and green representing patients with heart disease. 
+        This figure provides information on easily identifiable each patient group is. In this example,
+        the green and blue dots exhibit little separation and high interspersal, making it challenging to parse the two groups.  </p> 
+    </div>
       </div>
   </div>   
 
-<!-- <img src="static/images/featurecorrelation.png"> -->
 
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>                         ​

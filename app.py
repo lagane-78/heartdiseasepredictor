@@ -37,12 +37,18 @@ def data():
 def genderanalysis():
     return render_template('gender.html')
 
-@app.route('/predictmodel')
+@app.route('/predictmodel', methods=['POST'])
 def predictmodel():
+    
+    print("print form data 2", request.form, file=sys.stderr, flush=True)
+    formdata = request.form
+    # print('age and sex')
+    # print(formdata['age'],flush=True)
+    # print(formdata['sex'].split(":")[0],flush=True)
     # change this to take the data from the form to pass into
-    inputfile ="temp/data/testing.csv"
-    y = predictresult.prediction(inputfile)
-    return render_template('test.html', heart_prediction=y.to_html())
+    # inputfile = "temp/data/testing.csv"
+    y = predictresult.prediction(formdata)
+    return render_template('modelresults.html', heart_prediction=y.to_html())
 
 
 if __name__ == '__main__':

@@ -10,8 +10,11 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <div class="hero-image">
         <div class="hero-text">
-          <h1>Heart Disease Predictor</h1>
-          <p>With these models we are attempting to see if you can isolate the biggest risk factors leading to heart disease</p>
+          
+          <div class="row"> 
+                    </div>
+          <h1>Heart Disease Prediction Demonstration Model</h1>
+              
         </div>
       </div>
       <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: rgb(211, 17, 17)";>
@@ -26,15 +29,14 @@
           <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
             <a class="dropdown-item" href="model1">KNN</a>
             <a class="dropdown-item" href="model2">LR</a>
-            <a class="dropdown-item" href=""></a>
-            <a class="dropdown-item" href=""></a>
           </div>
         </div>
+     
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
           <div class="navbar-nav">
             </div>
             <a class="nav-item nav-link" href=""></a>
-            <!-- <a class="nav-item nav-link" href=""></a>  -->
+
             <div class="dropdown">
               <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="background-color: black;">
                 Data
@@ -42,8 +44,6 @@
               <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                 <a class="dropdown-item" href="data">Data</a>
                 <a class="dropdown-item" href="gender">Gender Analysis</a>
-                <a class="dropdown-item" href=""></a>
-                <a class="dropdown-item" href=""></a>
               </div>
             </div>
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
@@ -61,26 +61,139 @@
 </head>
 <body>  
 
- <footer class="container-fluid text-center">
-  <p>This is where a brief description of our models and the purpose of our project will go</p>
+ <footer class="container-fluid text-left">
+  <p>
+    Heart disease is the leading cause of death worldwide.  Definitive diagnosis of heart disease is challenging due to its many and complexly interrelated manifestation of symptoms, manifestations, and risk factors.  
+  </p>
+  <p>
+    In this demonstration project, we used machine learning algorithms to develop a heart disease prediction tool to allow users to predict the presence of heart disease based on their individual risk factors, symptoms, test, and examination results.
+  </p>
+  <p>
+    Enter values in the form below to see if these models predict the presence of heart disease:
+  </p>
 </footer>
 <div class="container">
-    <div class="row">
-
-    </div>
-    <div class="row"> 
-        <div class="col-lg-6 col-lg-6"><img src="static/images/featurecorrelation.png"></div>   
-        <div class="col-lg-6 col-lg-6"><img src="static/images/KNNclassiferscore.png"></div> 
+    <!-- <div class="row"> -->
+        
+      
+      <form action="{{ url_for('predictmodel') }}" method="post" >
+        <div class="form-group row">
+          <div class='col-sm-3'>
+          <label for="exampleFormControlInput1">Age</label>
+          <input type="number" class="form-control" name="age" id="age" placeholder="25">
+          </div>
+        <!-- </div>
+        <div class="form-group row"> -->
+           <div class="col-sm-3">
+          <label for="exampleFormControlSelect1">Sex</label>
+          <select class="form-control" name="sex" id="sex">
+            <option>1: Male</option>
+            <option>0: Female</option>
+          </select>
+        </div>
       </div>
+      <div class="form-group row">
+        <div class='col-sm-3'>
+        <label for="exampleFormControlInput1">Chest Pain Location( painloc: chest pain location (1 = substernal; 0 = otherwise) can we fix the label)</label>
+        <input type="number" class="form-control" name="cp" id="cp" default="0" placeholder="0">
+        </div>
+        <div class="form-group row">
+          <div class="col-sm-3">
+          <label for="exampleFormControlInput1">Resting Heartrate (mm hg)</label>
+          <input type="text" class="form-control" name="trestbp" id="trestbp" placeholder="55">
+        </div>
+        <!-- </div>
+        <div class="form-group row"> -->
+          <div class="col-sm-3">
+          <label for="exampleFormControlInput1">Cholesterol</label>
+          <input type="number" class="form-control" name="chol" id="chol" placeholder="120">
+        </div>
+      </div>
+        <div class="form-group row">
+          <div class="col-sm-3">
+          <label for="exampleFormControlSelect1">fasting blood sugar > 120 mg/dl</label>
+          <select class="form-control" name="fbs" id="fbs">
+            <option>1: True</option>
+            <option>0: False</option>
+          </select>
+        </div>
+      </div>
+        <div class="form-group row">
+          <div class="col-sm-8">
+          <label for="exampleFormControlSelect1">Resting electrocardiographic results</label>
+          <select class="form-control" name="restecg" id="restecg">
+            <option>0: normal</option>
+            <option>1: having ST-T wave abnormality (T wave inversions and/or ST elevation or depression of > 0.05 mV)</option>
+            <option>2: showing probable or definite left ventricular hypertrophy by Estes' criteria </option>
+          </select>
+        </div>
+      </div>
+        <div class="form-group row">
+          <div class="col-xs-2">
+          <label for="exampleFormControlInput1">Maximun Heartrate Achieved</label>
+          <input type="number" class="form-control" name="thalach" id="thalach" placeholder="125">
+        </div>
+      <!-- </div>
+        <div class="form-group row"> -->
+          <div class="col-xs-2">
+          <label for="exampleFormControlSelect1">Exercise induced angina (1 = yes; 0 = no) </label>
+          <select class="form-control" name="exang" id="exang">
+            <option>0:no</option>
+            <option>1:yes</option>
+          </select>
+        </div>
+      </div>
+        <div class="form-group row">
+          <div class="col-xs-4">
+          <label for="exampleFormControlInput1">ST depression induced by exercise relative to rest </label>
+          <input type="number" class="form-control" name="oldpeak" id="oldpeak" placeholder="125">
+        </div>
+      </div>
+        <div class="form-group row">
+          <div class="col-xs-">
+          <label for="exampleFormControlSelect1">Slope: the slope of the peak exercise ST segment</label>
+          <select class="form-control" name="slope" id="slope">
+            <option>1: upsloping</option>
+            <option>2: flat</option>
+            <option>3: downsloping </option>
+          </select>
+        </div>
+      </div>
+        <div class="form-group row">
+          <div class="col-xs-2">
+          <label for="exampleFormControlSelect1">Number of major vessels (0-3) colored by flourosopy</label>
+          <select class="form-control" name="ca" id="ca">
+            <option>0</option>
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+          </select>
+        </div>
+      </div>
+        <div class="form-group row">
+          <div class="col-xs-2">
+          <label for="exampleFormControlSelect1">Thal</label>
+          <select class="form-control" name="thal" id="thal">
+            <option>3: normal</option>
+            <option>6: fixed defect</option>
+            <option>7: reversable defect </option>
+          </select>
+        </div>
+      </div>
+        <div class="form-group">
+          <input name="Run model" type="submit" class="btn btn-danger active" aria-pressed="true">
+          </div>
+      </form>
+    </div>
+    
   </div>   
-
-<!-- <img src="static/images/featurecorrelation.png"> -->
+  
+  
 
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>                         ​
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-
+<script src="static/logic.js"></script>
 </body>
 
 </html>
-

@@ -32,7 +32,7 @@ def prediction(inputfilename):
     # dataset = pd.DataFrame(columns=['age','sex', 'cp', 'trestbp','chol','fbs', 'restecg','thalach', 'exang','oldpeak', 'slope', 'ca', 'thal'])
     data = {'age':[inputfilename['age']],
     'sex':[inputfilename['sex'].split(":")[0]],
-    'cp':[inputfilename['cp']],
+    'cp':[inputfilename['cp'].split(":")[0]],
      'trestbp':[inputfilename['trestbp']],
      'chol':[inputfilename['chol']],
      'fbs':[inputfilename['fbs'].split(":")[0]],

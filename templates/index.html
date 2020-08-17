@@ -27,8 +27,8 @@
             Models
           </button>
           <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-            <a class="dropdown-item" href="model1">KNN</a>
-            <a class="dropdown-item" href="model2">LR</a>
+            <a class="dropdown-item" href="model1">KNN (Accuracy: 84% )</a>
+            <a class="dropdown-item" href="model2">LR( Accuracy: 87%)</a>
           </div>
         </div>
      
@@ -80,15 +80,16 @@
         <div class="form-group row">
           <div class='col-sm-3'>
           <label for="exampleFormControlInput1">Age</label>
-          <input type="number" class="form-control" name="age" id="age" value="25">
+          <input type="number" class="form-control" name="age" id="age" value="34">
           </div>
         <!-- </div>
         <div class="form-group row"> -->
            <div class="col-sm-3">
           <label for="exampleFormControlSelect1">Sex</label>
           <select class="form-control" name="sex" id="sex">
+            <option>0: Female</option>  
             <option>1: Male</option>
-            <option>0: Female</option>
+            
           </select>
         </div>
       </div>
@@ -96,27 +97,32 @@
         <div class='col-sm-3'>
             <label for="exampleFormControlInput1"><br>Chest Pain Location</label>
             <select class="form-control" name="cp" id="cp">
-              <option>0: Otherwise</option>
-              <option>1: Substernal</option>
+              <option>1: Atypical angina</option>
+              <option>0: Typical angina</option>
+              
+              <option>2: Non-anginal</option>
+              <option>3: Asymptommatic</option>
+             
             </select>
         </div>
         <div class="form-group row">
           <div class="col-sm-9">
               <label for="exampleFormControlInput1">Resting Heartrate (mm hg)</label>
-              <input type="text" class="form-control" name="trestbp" id="trestbp" value="55">
+              <input type="text" class="form-control" name="trestbp" id="trestbp" value="118">
           </div>
         </div>
       </div>  
         <div class="form-group row">
           <div class="col-sm-3">
             <label for="exampleFormControlInput1">Cholesterol (mg/dl)</label>
-            <input type="number" class="form-control" name="chol" id="chol" value="120">
+            <input type="number" class="form-control" name="chol" id="chol" value="210">
           </div>
           <div class="col-sm-4">
             <label for="exampleFormControlSelect1">fasting blood sugar > 120 mg/dl</label>
             <select class="form-control" name="fbs" id="fbs">
-              <option>1: True</option>
               <option>0: False</option>
+              <option>1: True</option>
+              
             </select>
           </div>
         </div>
@@ -124,8 +130,8 @@
           <div class="col-sm-6">
           <label for="exampleFormControlSelect1">Resting electrocardiographic results</label>
           <select class="form-control" name="restecg" id="restecg">
-            <option>0: normal</option>
             <option>1: having ST-T wave abnormality (T wave inversions and/or ST elevation or depression of > 0.05 mV)</option>
+            <option>0: normal</option>
             <option>2: showing probable or definite left ventricular hypertrophy by Estes' criteria </option>
           </select>
         </div>
@@ -133,7 +139,7 @@
         <div class="form-group row">
           <div class="col-sm-2">
           <label for="exampleFormControlInput1">Maximun Heartrate Achieved</label>
-          <input type="number" class="form-control" name="thalach" id="thalach" value="125">
+          <input type="number" class="form-control" name="thalach" id="thalach" value="192">
         </div>
       <!-- </div>
         <div class="form-group row"> -->
@@ -148,15 +154,16 @@
         <div class="form-group row">
           <div class="col-sm-4">
           <label for="exampleFormControlInput1">ST depression induced by exercise relative to rest </label>
-          <input type="number" class="form-control" name="oldpeak" id="oldpeak" value="125">
+          <input type="number" class="form-control" name="oldpeak" id="oldpeak" value="0.7">
         </div>
       </div>
         <div class="form-group row">
           <div class="col-sm-6">
           <label for="exampleFormControlSelect1">Slope: the slope of the peak exercise ST segment</label>
           <select class="form-control" name="slope" id="slope">
-            <option>1: upsloping</option>
             <option>2: flat</option>
+            <option>1: upsloping</option>
+            
             <option>3: downsloping </option>
           </select>
         </div>
@@ -174,6 +181,7 @@
           <div class="col-sm-2">
           <label for="exampleFormControlSelect1"> <br><br>Thalassemia</label>
           <select class="form-control" name="thal" id="thal">
+            <option>2: fixed defect</option>
             <option>3: normal</option>
             <option>6: fixed defect</option>
             <option>7: reversable defect </option>

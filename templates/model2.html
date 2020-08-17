@@ -58,7 +58,7 @@
 <body>  
 
  <footer class="container-fluid text-left">
-  <h5 class="myheader">Logistic Regression Model</h5>
+  <h5 class="myheader">Logistic Regression Model(Accuracy: 87%)</h5>
   <p> The Logistic Regression model is a supervised machine learning model for making binary predictions.
     LR models predict the probability of the default classification of a dichotomous variable, in this case the presence of heart diseas.
     The LR model is well suited to heart disease (HD) application because it can accomodate non-linear input parameters.
@@ -76,6 +76,15 @@
           However, the model incorrectly classified 10 patients with HD as healthy, and 19 healthy patients with HD.  </p> 
           
       </div>
+      <div class="row"> 
+        <div class="col-lg-1 col-lg-12"><img src="../static/images/lr_ROCAUC.png"></div>  
+        <p> ROC Curve: Receiver Operating Characteristic (or Area Under the Curve) visualizes the tradeoff between the sensitivity (true positive Y-axis) and specificity (false positive X-axis)</p> 
+        <p>Optimal model specification is at the top-left, indicating 100% predictive power. 
+          Therefore a larger area under the curve generally indicates better model predictive performance.
+        </p>
+      </div>
+      <p> </p>
+      <p> </p>
     <div class="row">     
         <div class="col-lg-1 col-lg-12"><img src="static/images/lr_discthresh.png"></div> 
         <p>Discrimination Threshold: This figure shows the probability (score) at which the positive class is chose over the negative class for binary (yes/no heart disease) classification.
@@ -94,13 +103,7 @@
     <div class="row">
 
     </div>
-    <div class="row"> 
-        <div class="col-lg-1 col-lg-12"><img src="../static/images/lr_ROCAUC.png"></div>  
-        <p> ROC Curve: Receiver Operating Characteristic (or Area Under the Curve) visualizes the tradeoff between the sensitivity (true positive Y-axis) and specificity (false positive X-axis)</p> 
-        <p>Optimal model specification is at the top-left, indicating 100% predictive power. 
-          Therefore a larger area under the curve generally indicates better model predictive performance.
-        </p>
-      </div>
+  
       <p> </p>
       <p> </p>
     <div class="row"> 

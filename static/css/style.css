@@ -46,4 +46,15 @@ img {
 
 .myheader {font-size: x-large !important;
 font-weight: bold !important;
-color: black !important;}
+color: black !important;
+text-align: center !important;}
+
+.dropdown-menu .dropdown-item{font-weight: bold;}
+
+.dropdown-menu .dopdown-item:hover {
+  background-image: none;
+  color: red;
+  }
+
+.btn .btn-default{background-color: ivory !important;}
+
